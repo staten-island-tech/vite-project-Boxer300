@@ -1,5 +1,5 @@
 import './style.css'
- const clothes = [
+ const memes = [
   {
     name: "Distracted Boyfriend",
     category: "funny",
@@ -51,14 +51,14 @@ import './style.css'
     image: "https://pbs.twimg.com/media/Fsi5-9vWcAYK3xp.jpg"
   }
 ];
- clothes.forEach((item) => inject(item))
-function inject(clothes) {
-   document.querySelector(".container").insertAdjacentHTML(
+ memes.forEach((meme) => inject(meme))
+function inject(memes) {
+   document.querySelector(".main").insertAdjacentHTML(
     "afterbegin",
      `<div class="display-card">
-      <img class="display-image" src="${clothes.image}" />
-       <h2 class="display-category">${clothes.name} </h2>
-      <h3 class="display-title">${clothes.category} </h3>
+      <img class="display-image" src="${memes.image}" />
+       <h2 class="display-category">${memes.name} </h2>
+      <h3 class="display-title">${memes.category} </h3>
        <button class="add text">Add text</button>
     </div>`
    );
@@ -69,7 +69,6 @@ document.addEventListener("click", (event) => {
   }
 }); 
 document.querySelector(".btn").addEventListener("click", function () {
-  console.log("ets")
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
     document.body.classList.remove("cool");
