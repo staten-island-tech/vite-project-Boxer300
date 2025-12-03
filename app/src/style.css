@@ -31,11 +31,15 @@ html, body, *{
 
 .main {
   background-color: var(--secondary);
-  height: 90vh;
-}
-.image {
-   display: flex; /* Makes the container a flex container */
+  height: 90vh;   
+  display: flex; /* Makes the container a flex container */
   justify-content: space-between; /* Distributes space between items */
   align-items: flex-start; /* Aligns items to the start of the cross-axis */
-  /* Or align-items: stretch; if you want them to fill the container height */
+  object-fit: cover;
+}
+.display-image {
+  width: 100%;
+  height: 70px;
+  width: 50px;
+  object-fit: cover;
 }
