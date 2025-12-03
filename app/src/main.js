@@ -78,6 +78,6 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 function filter(category){
-const filtered = clothes.filter(cloth => cloth.category === category);
+const filtered = memes.filter(meme => meme.category === category);
 return filtered;
 }
