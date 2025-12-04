@@ -78,7 +78,7 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 displayItems(memes);
-function filter(category){
+function filter(category) {
 const filtered = memes.filter((meme) => meme.category === category);
 displayItems(filtered);
 }
