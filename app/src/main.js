@@ -77,7 +77,11 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
+displayItems(memes);
 function filter(category){
-const filtered = memes.filter(meme => meme.category === category);
-return filtered;
+const filtered = memes.filter((meme) => meme.category === category);
+displayItems(filtered);
+}
+function showAll() {
+  displayItems(memes);
 }
