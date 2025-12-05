@@ -63,9 +63,10 @@ function inject(memes) {
     </div>`
    );
   }
+
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("Add text")) {
-    addToCart(event);
+    (event);
   }
 }); 
 document.querySelector(".btn").addEventListener("click", function () {
@@ -77,11 +78,8 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-displayItems(memes);
 function filter(category) {
 const filtered = memes.filter((meme) => meme.category === category);
-displayItems(filtered);
+return(filtered);
 }
-function showAll() {
-  displayItems(memes);
-}
+filter("funny");
