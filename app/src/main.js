@@ -69,6 +69,16 @@ document.addEventListener("click", (event) => {
     (event);
   }
 }); 
+displayItems(memes);
+
+function filter(category) {
+const filtered = memes.filter((meme) => meme.category === category);
+displayItems(filtered);
+}
+function showAll() {
+  displayItems(memes);
+}
+
 document.querySelector(".btn").addEventListener("click", function () {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
@@ -78,8 +88,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-function filter(category) {
-const filtered = memes.filter((meme) => meme.category === category);
-return(filtered);
-}
-filter("funny");
+document.querySelector(".all").addEventListener("click", showAll);
+document.querySelector(".funny").addEventListener("click", () => filter("funny"));
+document.querySelector(".smart").addEventListener("click", () => filter("smart"));
+document.querySelector(".dark humor").addEventListener("click", () => filter("dark humor"));
