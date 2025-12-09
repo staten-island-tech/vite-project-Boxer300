@@ -91,4 +91,7 @@ document.querySelector(".btn").addEventListener("click", function () {
 document.querySelector(".all").addEventListener("click", showAll);
 document.querySelector(".funny").addEventListener("click", () => filter("funny"));
 document.querySelector(".smart").addEventListener("click", () => filter("smart"));
-document.querySelector(".dark humor").addEventListener("click", () => filter("dark humor"));
+document.querySelector(".dark-humor").addEventListener("click", () => filter("dark humor"));
+document.querySelector(".wholesome").addEventListener("click", () => filter("wholesome"));
+document.querySelector(".reaction").addEventListener("click", () => filter("reaction"));
+document.querySelector(".relatable").addEventListener("click", () => filter("relatable"));
