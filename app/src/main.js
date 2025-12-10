@@ -47,7 +47,7 @@ import './style.css'
   },
   {
     name: "Dog in Burning Room (This is Fine)",
-    category: "dark humor",
+    category: "relatable",
     image: "https://pbs.twimg.com/media/Fsi5-9vWcAYK3xp.jpg"
   }
 ];
@@ -69,14 +69,17 @@ document.addEventListener("click", (event) => {
     (event);
   }
 }); 
-displayItems(memes);
+inject(memes);
 
 function filter(category) {
+  
+document.querySelector(".main").innerHTML = ""
 const filtered = memes.filter((meme) => meme.category === category);
-displayItems(filtered);
+filtered.forEach((meme)=> inject(meme))
+
 }
 function showAll() {
-  displayItems(memes);
+  inject(memes);
 }
 
 document.querySelector(".btn").addEventListener("click", function () {
@@ -88,10 +91,21 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-document.querySelector(".all").addEventListener("click", showAll);
-document.querySelector(".funny").addEventListener("click", () => filter("funny"));
-document.querySelector(".smart").addEventListener("click", () => filter("smart"));
-document.querySelector(".dark-humor").addEventListener("click", () => filter("dark humor"));
-document.querySelector(".wholesome").addEventListener("click", () => filter("wholesome"));
-document.querySelector(".reaction").addEventListener("click", () => filter("reaction"));
-document.querySelector(".relatable").addEventListener("click", () => filter("relatable"));
+document.querySelector(".all").addEventListener("click",function(){
+  showAll("all")
+});
+document.querySelector(".funny").addEventListener("click",function(){
+  filter("funny")
+});
+document.querySelector(".smart").addEventListener("click",function(){
+  filter("smart")
+});
+document.querySelector(".wholesome").addEventListener("click",function(){
+  filter("wholesome")
+});
+document.querySelector(".reaction").addEventListener("click",function(){
+  filter("reaction")
+});
+document.querySelector(".relatable").addEventListener("click",function(){
+  filter("relatable")
+});
