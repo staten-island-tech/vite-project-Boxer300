@@ -91,9 +91,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-document.querySelector(".all").addEventListener("click",function(){
-  showAll("all")
-});
+document.querySelector(".all").addEventListener("click",showAll);
 document.querySelector(".funny").addEventListener("click",function(){
   filter("funny")
 });
