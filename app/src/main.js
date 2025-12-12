@@ -63,6 +63,15 @@ function inject(memes) {
     </div>`
    );
   }
+  document.querySelector(".btn").addEventListener("click", function () {
+  if (document.body.classList.contains("cool")) {
+    document.body.classList.add("warm");
+    document.body.classList.remove("cool");
+  } else {
+    document.body.classList.add("cool");
+    document.body.classList.remove("warm");
+  }
+});
 
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("Add text")) {
@@ -79,19 +88,13 @@ filtered.forEach((meme)=> inject(meme))
 
 }
 function showAll() {
-  inject(memes);
+document.querySelector(".main").innerHTML = "";
+memes.forEach(meme => inject(meme));
 }
 
-document.querySelector(".btn").addEventListener("click", function () {
-  if (document.body.classList.contains("cool")) {
-    document.body.classList.add("warm");
-    document.body.classList.remove("cool");
-  } else {
-    document.body.classList.add("cool");
-    document.body.classList.remove("warm");
-  }
+document.querySelector(".all").addEventListener("click", function(){
+  showAll()
 });
-document.querySelector(".all").addEventListener("click",showAll);
 document.querySelector(".funny").addEventListener("click",function(){
   filter("funny")
 });
