@@ -110,3 +110,15 @@ document.querySelector(".reaction").addEventListener("click",function(){
 document.querySelector(".relatable").addEventListener("click",function(){
   filter("relatable")
 });
+window.addMeme = function () {
+  const url = document.getElementById("imageInput").value;
+  if (!url) return;
+
+  memes.push({
+    name: "User Meme",
+    category: "custom",
+    image: url
+  });
+
+  render(memes);
+};
