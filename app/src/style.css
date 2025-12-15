@@ -45,7 +45,7 @@ width: 100%;
   object-fit: cover;
 }
 .brbr {
-    font-size: 1.6rem;   /* 16px */
+  font-size: 1.6rem;   /* 16px */
   padding: 1rem 2rem;
   margin: 0.5rem;
   border-radius: 8px;
@@ -54,6 +54,8 @@ width: 100%;
   color: white;
   cursor: pointer;
 }
+
+
 /* .main {
   display: flex;
   flex-wrap: wrap;

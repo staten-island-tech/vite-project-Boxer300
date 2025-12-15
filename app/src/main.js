@@ -52,17 +52,28 @@ import './style.css'
   }
 ];
  memes.forEach((meme) => inject(meme))
-function inject(memes) {
-   document.querySelector(".main").insertAdjacentHTML(
+ function inject(memes) {
+    document.querySelector(".main").insertAdjacentHTML(
     "afterbegin",
      `<div class="display-card">
-      <img class="display-image" src="${memes.image}" />
-       <h2 class="display-category">${memes.name} </h2>
+       <img class="display-image" src="${memes.image}" />
+        <input class="caption" placeholder="meme text" />
+        <h2 class="display-category">${memes.name} </h2>
       <h3 class="display-title">${memes.category} </h3>
-       <button class="add text">Add text</button>
+      <button class="add text">Add text</button>
+   </div>`
+    );
+   }  
+/*  function inject(meme) {
+  document.querySelector(".main").insertAdjacentHTML(
+    "beforeend",
+    `<div class="display-card">
+      <img class="display-image" src="${meme.image}" />
+      <input class="caption" placeholder="Type your meme text" />
+      <h3>${meme.name}</h3>
     </div>`
-   );
-  }
+  );
+} */
   document.querySelector(".btn").addEventListener("click", function () {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
@@ -73,12 +84,12 @@ function inject(memes) {
   }
 });
 
-document.addEventListener("click", (event) => {
+/* document.addEventListener("click", (event) => {
   if (event.target.classList.contains("Add text")) {
     (event);
   }
 }); 
-inject(memes);
+inject(memes); */
 
 function filter(category) {
   
