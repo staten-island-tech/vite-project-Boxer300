@@ -64,16 +64,6 @@ import './style.css'
    </div>`
     );
    }  
-/*  function inject(meme) {
-  document.querySelector(".main").insertAdjacentHTML(
-    "beforeend",
-    `<div class="display-card">
-      <img class="display-image" src="${meme.image}" />
-      <input class="caption" placeholder="Type your meme text" />
-      <h3>${meme.name}</h3>
-    </div>`
-  );
-} */
   document.querySelector(".btn").addEventListener("click", function () {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
@@ -83,13 +73,6 @@ import './style.css'
     document.body.classList.remove("warm");
   }
 });
-
-/* document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("Add text")) {
-    (event);
-  }
-}); 
-inject(memes); */
 
 function filter(category) {
   
@@ -131,5 +114,5 @@ window.addMeme = function () {
     image: url
   });
 
-  render(memes);
+  showAll();
 };

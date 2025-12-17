@@ -45,7 +45,7 @@ width: 100%;
   object-fit: cover;
 }
 .brbr {
-  font-size: 1.6rem;   /* 16px */
+  font-size: 25px;
   padding: 1rem 2rem;
   margin: 0.5rem;
   border-radius: 8px;
@@ -54,58 +54,38 @@ width: 100%;
   color: white;
   cursor: pointer;
 }
-
-
-/* .main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-}
-
 .display-card {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
   position: relative;
+  display: block;
 }
 
-.display-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.meme-text {
+.caption {
   position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+
+  font-size: 2.2rem;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 5px black;
-  pointer-events: none;
-}
-
-.add-text {
-  width: 100%;
-  margin-top: 1rem;
-  padding: 0.8rem;
-  cursor: pointer;
-}
-
-.toggle {
-  display: block;
-  margin: 2rem auto;
-  padding: 1.5rem 3rem;
-  font-size: 2rem;
+  background: transparent;
   border: none;
-  background: white;
-  border-radius: 10px;
-  cursor: pointer;
-} */
+  outline: none;
+  text-align: center;
+
+  text-shadow:
+    2px 2px 0 black,
+   -2px -2px 0 black,
+    2px -2px 0 black,
+   -2px 2px 0 black;
+}
+.btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
